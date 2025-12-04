@@ -1,2 +1,1 @@
-# UNDER CONSTRUCTION BUT
-(www.linkedin.com/in/camrynn-helliwell-53849736b "LinkedIn")
+# UNDER CONSTRUCTION BUT CHECK OUT MY [LINKEDIN](www.linkedin.com/in/camrynn-helliwell-53849736b) IN THE MEANTIME
