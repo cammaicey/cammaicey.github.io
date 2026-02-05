@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dragon Kisser | Project Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #111827;       /* dark gray-blue */
+      --bg-alt: #020617;
+      --card: #020617;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.12);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --radius: 12px;
+      --shadow: 0 18px 45px rgba(0, 0, 0, 0.7);
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: radial-gradient(circle at top, #111827 0, #020617 40%, #000 100%);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 32px 16px 64px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .shell {
+      width: 100%;
+      max-width: 1080px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .logo-text {
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      padding-bottom: 2px;
+      border-bottom: 1px solid transparent;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+      border-color: var(--accent);
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(260px, 1.1fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 800px) {
+      body {
+        padding: 16px 12px 48px;
+      }
+      main {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .panel {
+      background: radial-gradient(circle at top left, rgba(31,41,55,0.9), rgba(15,23,42,0.98));
+      border-radius: 18px;
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      box-shadow: var(--shadow);
+      padding: 24px 24px 28px;
+      backdrop-filter: blur(18px);
+    }
+
+    .section-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .hero-header {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .hero-title {
+      font-size: clamp(24px, 3vw, 32px);
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .hero-subtitle {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .hero-text {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .poster-wrapper {
+      margin-top: 12px;
+      border-radius: 16px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.16), rgba(15, 23, 42, 0.98));
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 260px;
+      overflow: hidden;
+    }
+
+    .poster-wrapper img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    .poster-placeholder {
+      font-size: 13px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* Media grids */
+    .media-section {
+      margin-top: 24px;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .media-item {
+      background: rgba(15, 23, 42, 0.95);
+      border-radius: 12px;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .media-item img {
+      display: block;
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .media-caption {
+      padding: 8px 10px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .media-item video {
+      width: 100%;
+      display: block;
+      background: #000;
+    }
+
+    /* Sidebar */
+    .aside {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .card {
+      background: linear-gradient(to bottom right, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.98));
+      border-radius: var(--radius);
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      padding: 16px 16px 18px;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .pill {
+      font-size: 11px;
+      border-radius: 999px;
+      padding: 2px 8px;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      color: var(--muted);
+    }
+
+    .meta-list {
+      font-size: 13px;
+      color: var(--muted);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-top: 4px;
+    }
+
+    .meta-list strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 11px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    a {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="logo-text">Dragon Kisser</div>
+      <nav class="nav-links">
+        <a href="#poster">Poster</a>
+        <a href="#images">Images</a>
+        <a href="#videos">Videos</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Left: main content -->
+      <section class="panel">
+        <div class="hero-header">
+          <div>
+            <h1 class="hero-title">Dragon Kisser</h1>
+            <p class="hero-subtitle">Boss fight capstone · Team Luciana · AI & Technical Animation</p>
+          </div>
+        </div>
+
+        <p class="hero-text">
+          Dragon Kisser follows Domingo the chicken as he attempts to romance the dragon Luciana through
+          wild boss encounters, dances, and minigames. This page collects my work on Luciana’s AI, state
+          machines, and procedural animation so it’s easy to demo and share.
+        </p>
+
+        <!-- Poster / logo -->
+        <section id="poster" class="media-section">
+          <h2 class="section-title">Poster / Logo</h2>
+          <div class="poster-wrapper">
+            <!-- Replace poster.png with your actual poster or logo image -->
+            <!-- <img src="poster.png" alt="Dragon Kisser poster" /> -->
+            <div class="poster-placeholder">
+              Drop your Dragon Kisser poster or logo image here.<br />
+              Replace this placeholder with an <code>&lt;img&gt;</code> tag.
+            </div>
+          </div>
+        </section>
+
+        <!-- Images gallery -->
+        <section id="images" class="media-section">
+          <h2 class="section-title">Screenshots & Images</h2>
+          <div class="media-grid">
+            <!-- Image 1 -->
+            <article class="media-item">
+              <!-- Replace with your actual screenshot -->
+              <!-- <img src="luciana-ai-debug.png" alt="Luciana AI debug view" /> -->
+              <div class="poster-placeholder" style="padding: 24px 14px;">
+                Add an image: e.g., Luciana behavior tree, state tree, or in-game screenshot.
+              </div>
+              <div class="media-caption">
+                Luciana AI behavior, state trees, or other in‑engine shots.
+              </div>
+            </article>
+
+            <!-- Image 2 -->
+            <article class="media-item">
+              <!-- <img src="neck-ik-setup.png" alt="Neck IK setup" /> -->
+              <div class="poster-placeholder" style="padding: 24px 14px;">
+                Add another image: neck/head IK, eye tracking, or animation blueprint.
+              </div>
+              <div class="media-caption">
+                Procedural neck/head/eye setup in the animation blueprint.
+              </div>
+            </article>
+
+            <!-- Image 3 -->
+            <article class="media-item">
+              <!-- <img src="domingo-dance.png" alt="Domingo dance minigame" /> -->
+              <div class="poster-placeholder" style="padding: 24px 14px;">
+                Add an image from one of the minigames or boss phases.
+              </div>
+              <div class="media-caption">
+                Gameplay stills from dances, minigames, or boss phases.
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Video gallery -->
+        <section id="videos" class="media-section">
+          <h2 class="section-title">Videos & Clips</h2>
+          <div class="media-grid">
+            <!-- Local video example -->
+            <article class="media-item">
+              <!-- Replace src with your local MP4 or WebM clip -->
+              <!--
+              <video controls preload="metadata">
+                <source src="luciana-ai-showcase.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              -->
+              <div class="poster-placeholder" style="padding: 24px 14px;">
+                Replace this with a <code>&lt;video&gt;</code> tag for a short Luciana AI showcase clip.
+              </div>
+              <div class="media-caption">
+                Short clip demonstrating Luciana’s AI behavior and transitions between states.
+              </div>
+            </article>
+
+            <!-- Embedded YouTube/Vimeo example -->
+            <article class="media-item">
+              <!-- Example iframe for a hosted video (YouTube, etc.) -->
+              <!--
+              <iframe
+                src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                title="Dragon Kisser gameplay"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                style="width:100%; aspect-ratio:16/9;"
+              ></iframe>
+              -->
+              <div class="poster-placeholder" style="padding: 24px 14px;">
+                Or embed a YouTube/Vimeo link here with an <code>&lt;iframe&gt;</code>.
+              </div>
+              <div class="media-caption">
+                Longer gameplay reel: full fight, minigames, or animation overview.
+              </div>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <!-- Right: sidebar info -->
+      <aside class="aside">
+        <section class="card">
+          <div class="card-header">
+            <h2 class="section-title" style="margin-bottom:0;">Role & Responsibilities</h2>
+            <span class="pill">Dragon Kisser</span>
+          </div>
+          <div class="meta-list">
+            <div><strong>Role</strong> · Gameplay & AI Programmer, Technical Animation</div>
+            <div><strong>Focus</strong> · Luciana behavior, state trees, animation blueprint work.</div>
+            <div><strong>Tools</strong> · Unreal Engine, State Trees, Behavior Trees, Perforce.</div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-header">
+            <h2 class="section-title" style="margin-bottom:0;">Links</h2>
+            <span class="pill">More info</span>
+          </div>
+          <div class="meta-list">
+            <div><strong>Portfolio</stron
