@@ -152,7 +152,7 @@
          .projects {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            align-items: start;
+            align-items: stretch;
             gap: 10px;
         }
 
@@ -227,9 +227,9 @@
          .project.featured {
             padding: 0;
             overflow: hidden;
-            display: grid;
-            grid-template-columns: 1fr;
-            align-self: start;
+            display: flex;
+            flex-direction: column;
+            align-self: stretch;
             transition: transform .18s ease, box-shadow .18s ease;
             border-color: #d5cde5;
         }
@@ -286,6 +286,7 @@
 
         .featured-content {
             padding: 8px 10px;
+            flex: 1;
         }
 
         .featured-content h3 {
@@ -537,7 +538,7 @@
                         </div>
 
                         <div class="project-actions">
-                            <a class="button" href="spookycircusmaze.html">
+                            <a class="button primary" href="spookycircusmaze.html">
                                 Explore Project
                             </a>
                         </div>
