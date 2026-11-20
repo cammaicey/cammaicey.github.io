@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact | Camrynn Zumwalt</title>
+    <meta name="description" content="Contact Camrynn Zumwalt, gameplay programmer focused on game AI and gameplay systems.">
+    <style>
+        :root{--bg:#121116;--paper:#1c1921;--ink:#eeeaf1;--muted:#aaa1b0;--line:#37303d;--accent:#a58acb;--accent-light:#30273b;--max:1040px}
+        *{box-sizing:border-box}
+        body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+        a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+        .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+        header{padding:18px 0;border-bottom:1px solid var(--line)}
+        .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+        .brand{display:flex;align-items:center;gap:9px;font-weight:700;letter-spacing:.02em}
+        .brand-role{font-weight:500;letter-spacing:0;color:var(--muted);font-size:.78rem;white-space:nowrap;border-left:1px solid var(--line);padding-left:12px;margin-left:3px}
+        .brand img{width:34px;height:34px;border-radius:50%;object-fit:cover;display:block}
+        .nav-links{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+        .nav-links a{color:var(--muted);font-size:.94rem}
+        .nav-links a.active{color:var(--accent);font-weight:700;background:rgba(119,103,165,.12);padding:6px 10px;border-radius:8px}
+        main{padding:34px 0 56px}
+        .eyebrow{font-size:.8rem;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);font-weight:700}
+        h1{font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.08;letter-spacing:-.045em;margin:12px 0}
+        .intro{max-width:650px;color:var(--muted);margin:0 0 26px;font-size:1.08rem}
+        .contact-card{max-width:720px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:26px}
+        form{display:grid;gap:16px}
+        .field{display:grid;gap:6px}
+        label{font-weight:600;font-size:.94rem}
+        input,textarea{width:100%;font:inherit;color:var(--ink);background:#15131a;border:1px solid var(--line);border-radius:8px;padding:11px 13px;outline:none}
+        input:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(165,138,203,.14)}
+        textarea{min-height:170px;resize:vertical}
+        .optional{color:var(--muted);font-weight:400;font-size:.86rem}
+        button{justify-self:start;border:1px solid var(--accent);border-radius:8px;background:var(--accent);color:#fff;padding:10px 17px;font:inherit;font-weight:650;cursor:pointer}
+        button:disabled{opacity:.65;cursor:wait}
+        .status{display:none;border-radius:8px;padding:11px 14px;font-size:.94rem}
+        .status.show{display:block}.status.success{color:#c4e8ce;background:#1c2a22;border:1px solid #355441}.status.error{color:#f1c1c1;background:#2b1d21;border:1px solid #58323c}
+        .alt{color:var(--muted);margin-top:18px;font-size:.92rem}
+        footer{padding:32px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+        @media(max-width:700px){.nav{align-items:flex-start;flex-direction:column}.contact-card{padding:18px}main{padding-top:24px}}
+    </style>
+</head>
+<body>
+<header>
+    <div class="wrap nav">
+        <div class="brand"><img src="media/pictures/linkedinpfp.png" alt="Profile photo">Camrynn Zumwalt<span class="brand-role">Gameplay Programmer · Game AI</span></div>
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="aboutme.html">About Me</a>
+            <a href="contact.html" aria-current="page" class="active">Contact</a>
+        </nav>
+    </div>
+</header>
+<main class="wrap">
+    <span class="eyebrow">Contact</span>
+    <h1>Get in Touch</h1>
+    <p class="intro">Have a question about my work, an opportunity, or want to talk games? I'd love to hear from you.</p>
+    <div class="contact-card">
+        <form id="contact-form" action="https://formspree.io/f/xnpdbplg" method="POST">
+            <input type="hidden" name="_subject" value="New Portfolio Contact">
+            <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+                <label for="subject">Subject <span class="optional">(optional)</span></label>
+                <input id="subject" name="subject" type="text">
+            </div>
+            <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <div id="form-status" class="status" role="status" aria-live="polite"></div>
+            <button id="submit-button" type="submit">Send Message</button>
+        </form>
+    </div>
+    <p class="alt">You can also find me on <a href="https://www.linkedin.com/in/camrynn-zumwalt-53849736b/" target="_blank" rel="noreferrer">LinkedIn</a>.</p>
+</main>
+<footer><div class="wrap">© <span id="year"></span> Camrynn Zumwalt · Built with HTML &amp; CSS · GitHub Pages</div></footer>
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const form = document.getElementById("contact-form");
+    const status = document.getElementById("form-status");
+    const button = document.getElementById("submit-button");
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        status.className = "status";
+        status.textContent = "";
+        button.disabled = true;
+        button.textContent = "Sending...";
+        try {
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: { Accept: "application/json" }
+            });
+            if (response.ok) {
+                status.className = "status show success";
+                status.textContent = "Message sent successfully! Thanks for reaching out.";
+                form.reset();
+            } else {
+                status.className = "status show error";
+                status.textContent = "Sorry, your message couldn't be sent. Please try again.";
+            }
+        } catch (error) {
+            status.className = "status show error";
+            status.textContent = "Something went wrong sending your message. Please try again.";
+        } finally {
+            button.disabled = false;
+            button.textContent = "Send Message";
+        }
+    });
+</script>
+</body>
+</html>
