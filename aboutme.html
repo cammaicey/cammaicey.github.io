@@ -109,6 +109,25 @@
             margin: 0;
         }
 
+        .intro-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 220px;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .intro-photo {
+            width: 100%;
+            max-width: 220px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 16px;
+            border: 1px solid var(--line);
+            display: block;
+            justify-self: end;
+        }
+
         section {
             padding: 26px 0;
         }
@@ -205,6 +224,16 @@
                 grid-template-columns: 1fr;
             }
 
+            .intro-layout {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .intro-photo {
+                max-width: 190px;
+                justify-self: start;
+            }
+
             .card,
             .story,
             .contact-card {
@@ -251,15 +280,20 @@
     <main class="wrap">
         <!-- Introduction -->
         <section class="hero">
-            <div class="eyebrow">A little about me</div>
-            <h1>I like making games feel alive.</h1>
-            <p class="lead">
-                I’m a gameplay programmer studying Computer Science with emphasis in Animation
-                and Games at Brigham Young University. I’m drawn to the parts
-                of game development where code becomes something players can feel—an
-                enemy reacting to them, an encounter finding its rhythm, or an
-                animation making a character feel expressive.
-            </p>
+            <div class="intro-layout">
+                <div class="intro-text">
+                    <div class="eyebrow">A little about me</div>
+                    <h1>I like making games feel alive.</h1>
+                    <p class="lead">
+                        I’m a gameplay programmer studying Computer Science with emphasis in Animation
+                        and Games at Brigham Young University. I’m drawn to the parts
+                        of game development where code becomes something players can feel—an
+                        enemy reacting to them, an encounter finding its rhythm, or an
+                        animation making a character feel expressive.
+                    </p>
+                </div>
+                <img class="intro-photo" src="media/pictures/linkedinpfp.png" alt="Profile photo">
+            </div>
         </section>
 
         <!-- Interests -->
