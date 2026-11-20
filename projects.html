@@ -57,8 +57,19 @@
         }
 
         .brand {
+            display: flex;
+            align-items: center;
+            gap: 9px;
             font-weight: 700;
             letter-spacing: .02em;
+        }
+
+        .brand img {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
         }
 
         .nav a {
@@ -375,7 +386,7 @@
 
     <header>
         <div class="wrap nav">
-            <a class="brand" href="index.html">Camrynn Zumwalt</a>
+            <a class="brand" href="index.html"><img src="media/pictures/linkedinpfp.png" alt="Profile photo">Camrynn Zumwalt</a>
             <nav class="nav-links" aria-label="Main navigation">
                 <a href="index.html">Home</a>
                 <a href="projects.html" aria-current="page" class="active">Projects</a>
