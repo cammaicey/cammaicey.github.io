@@ -226,6 +226,34 @@
             overflow: hidden;
         }
 
+        .project-art {
+            display: flex;
+            min-height: 260px;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            padding: 28px;
+            text-align: center;
+            color: white;
+            background: linear-gradient(135deg, #35384a, #7770a1);
+        }
+
+        .project-art.nuked {
+            background: linear-gradient(135deg, #343b42, #7d8b91);
+        }
+
+        .project-art.circus {
+            background: linear-gradient(135deg, #4b263c, #a66d7d);
+        }
+
+        .project-art span {
+            font-size: clamp(1.6rem, 3vw, 2.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -.04em;
+            text-shadow: 0 2px 12px rgba(0,0,0,.2);
+        }
+
         .featured-image img {
             width: 100%;
             height: 100%;
@@ -415,59 +443,70 @@
                 </article>
 
                 <!-- Nuked by Noon -->
-                <article class="project">
+                <article class="project featured">
 
-                    <div class="project-top">
-                        <h3>Nuked by Noon</h3>
-                        <div class="meta">
-                            CSANM 342: Real-Time Techniques / CSANM 494R: Special Problems · 2025–2026
+                    <div class="featured-image project-art nuked" aria-label="Nuked by Noon visual panel">
+                        <span>Nuked by Noon</span>
+                    </div>
+
+                    <div class="featured-content">
+                        <div class="project-top">
+                            <h3>Nuked by Noon</h3>
+                            <div class="meta">
+                                CSANM 342: Real-Time Techniques / CSANM 494R: Special Problems · 2025–2026
+                            </div>
                         </div>
-                    </div>
 
-                    <p>
-                        Nuked by Noon is a stealth game where I handled all of the programming and collaborated with artists for visual assets. My main focus was designing an AI system that can detect, search for, and attack the player using Unreal’s State Trees and AI Perception, creating an enemy that reacts intelligently to the player’s movements and visibility.
-                    </p>
+                        <p>
+                            Nuked by Noon is a stealth game where I handled all of the programming and collaborated with artists for visual assets. My main focus was designing an AI system that can detect, search for, and attack the player using Unreal’s State Trees and AI Perception, creating an enemy that reacts intelligently to the player’s movements and visibility.
+                        </p>
 
-                    <div class="tags">
-                        <span class="tag">Unreal Engine</span>
-                        <span class="tag">AI Perception</span>
-                        <span class="tag">State Trees</span>
-                    </div>
+                        <div class="tags">
+                            <span class="tag">Unreal Engine</span>
+                            <span class="tag">AI Perception</span>
+                            <span class="tag">State Trees</span>
+                        </div>
 
-                    <div class="project-actions">
-                        <a class="button" href="nukedbynoon.html">
-                            Explore project →
-                        </a>
+                        <div class="project-actions">
+                            <a class="button" href="nukedbynoon.html">
+                                Explore project →
+                            </a>
+                        </div>
                     </div>
 
                 </article>
 
                 <!-- Spooky Circus Maze -->
-                <article class="project">
+                <article class="project featured">
 
-                    <div class="project-top">
-                        <h3>Spooky Circus Maze</h3>
-                        <div class="meta">
-                            CS 455: Computer Graphics · 2026
+                    <div class="featured-image project-art circus" aria-label="Spooky Circus Maze visual panel">
+                        <span>Spooky Circus Maze</span>
+                    </div>
+
+                    <div class="featured-content">
+                        <div class="project-top">
+                            <h3>Spooky Circus Maze</h3>
+                            <div class="meta">
+                                CS 455: Computer Graphics · 2026
+                            </div>
+                        </div>
+
+                        <p>
+                            This project is a spooky, circus-themed maze game that I built in collaboration with two other programmers. I focus on the core gameplay code and systems design for navigating and surviving the maze, while we iterate together on pacing, difficulty, and how the circus atmosphere shapes the player experience.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">Unity</span>
+                            <span class="tag">AI</span>
+                            <span class="tag">Prototype</span>
+                        </div>
+
+                        <div class="project-actions">
+                            <a class="button" href="GITHUB_OR_DEMO_URL_FOR_CIRCUS_MAZE" target="_blank" rel="noreferrer">
+                                More details (Work-In-Progress) →
+                            </a>
                         </div>
                     </div>
-
-                    <p>
-                        This project is a spooky, circus-themed maze game that I built in collaboration with two other programmers. I focus on the core gameplay code and systems design for navigating and surviving the maze, while we iterate together on pacing, difficulty, and how the circus atmosphere shapes the player experience.
-                    </p>
-
-                    <div class="tags">
-                        <span class="tag">Unity</span>
-                        <span class="tag">AI</span>
-                        <span class="tag">Prototype</span>
-                    </div>
-
-                    <a class="project-link"
-                       href="GITHUB_OR_DEMO_URL_FOR_CIRCUS_MAZE"
-                       target="_blank"
-                       rel="noreferrer">
-                        More details (Work-In-Progress) →
-                    </a>
 
                 </article>
 
