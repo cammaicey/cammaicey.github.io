@@ -304,7 +304,7 @@
             border-radius: 8px;
         }
 
-    </style>
+    .project-layout{display:grid;grid-template-columns:190px minmax(0,1fr);gap:28px;align-items:start}.project-sidebar{position:sticky;top:24px;margin-top:8px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px}.sidebar-heading{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;color:var(--muted);padding:4px 8px 9px}.project-sidebar nav{display:flex;flex-direction:column;gap:4px}.project-sidebar nav a{display:block;color:var(--muted);padding:8px 9px;border-radius:7px;font-size:.92rem;line-height:1.35}.project-sidebar nav a:hover{background:var(--accentp, #eeeaf5);color:var(--accent);text-decoration:none}.project-sidebar nav a.active{background:var(--accentp, #eeeaf5);color:var(--accent);font-weight:700}@media(max-width:800px){.project-layout{grid-template-columns:1fr;gap:16px}.project-sidebar{position:static;margin:0;padding:10px}.project-sidebar nav{flex-direction:row;flex-wrap:wrap}.project-sidebar nav a{font-size:.82rem;padding:7px 9px}.project-content{min-width:0}}</style>
 </head>
 
 <body>
@@ -322,7 +322,7 @@
     </header>
 
     <!-- Main content -->
-    <main class="wrap">
+    <main class="wrap project-layout"><aside class="project-sidebar"><div class="sidebar-heading">Projects</div><nav aria-label="Project navigation"><a href="dragonkisser.html" class="active" aria-current="page">Dragon Kisser</a><a href="terracity.html">Welcome to Terror City</a><a href="nukedbynoon.html">Nuked by Noon</a><a href="spookycircusmaze.html">Spooky Circus Maze</a></nav></aside><div class="project-content">
 
         <!-- Project introduction -->
         <div class="eyebrow">Senior Capstone · Luciana</div>
@@ -560,7 +560,7 @@
             </div>
         </section>
 
-    </main>
+    </div></main>
 
     <!-- Footer -->
     <footer>
