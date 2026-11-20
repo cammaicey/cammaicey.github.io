@@ -218,8 +218,12 @@
 
     <footer>
         <div class="wrap">
-            Camrynn Zumwalt · <a href="index.html">Portfolio home</a>
+            © <span id="year"></span> Camrynn Zumwalt · Built with HTML & CSS · GitHub Pages
         </div>
     </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
