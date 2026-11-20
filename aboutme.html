@@ -212,6 +212,23 @@
                 align-items: flex-start;
             }
         }
+    
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            font-size: .94rem;
+        }
+
+        .nav-links a.active {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
     </style>
 </head>
 <body>
@@ -219,10 +236,10 @@
     <header>
         <div class="wrap nav">
             <a class="brand" href="index.html">Camrynn Zumwalt</a>
-
             <nav class="nav-links" aria-label="Main navigation">
+                <a href="index.html">Home</a>
                 <a href="projects.html">Projects</a>
-                <a class="active" href="aboutme.html" aria-current="page">About Me</a>
+                <a href="aboutme.html" aria-current="page" class="active">About Me</a>
             </nav>
         </div>
     </header>
