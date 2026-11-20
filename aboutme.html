@@ -1,32 +1,384 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About Me | Camrynn Zumwalt</title>
-<meta name="description" content="A little about Camrynn Zumwalt, gameplay programmer and game AI enthusiast.">
-<style>
-:root{--bg:#f7f6f2;--paper:#fff;--ink:#25272b;--muted:#696d73;--line:#e5e3dd;--accent:#7767a5;--max:1040px}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
-a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
-header{padding:28px 0;border-bottom:1px solid var(--line)}.nav{display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-weight:700;letter-spacing:.02em}.nav a{color:var(--muted);font-size:.94rem}.nav-links{display:flex;gap:18px}.nav-links a.active{color:var(--accent);font-weight:700}
-main{padding:54px 0 30px}.hero{padding:20px 0 44px}.eyebrow{font-size:.8rem;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);font-weight:700}
-h1{font-size:clamp(2.2rem,5vw,4.1rem);line-height:1.08;letter-spacing:-.045em;margin:14px 0 20px;font-weight:750}.lead{max-width:740px;font-size:1.13rem;color:var(--muted);margin:0}
-section{padding:26px 0}.section-head{margin-bottom:18px}h2{font-size:1.45rem;letter-spacing:-.025em;margin:0}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:22px}.card h3{margin:0 0 10px;font-size:1.1rem}.card p{margin:0;color:var(--muted)}.mini-label{display:block;margin-bottom:10px;color:var(--accent);font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700}
-.story{max-width:780px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:24px}.story p{color:var(--muted);margin:0 0 14px}.story p:last-child{margin-bottom:0}
-.contact-card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:22px;color:var(--muted)}.contact-card strong{color:var(--ink)}
-footer{padding:32px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
-@media(max-width:700px){main{padding:38px 0 24px}.hero{padding:10px 0 32px}.cards{grid-template-columns:1fr}.card,.story,.contact-card{padding:18px}.nav{align-items:flex-start}}
-</style></head><body>
-<header><div class="wrap nav"><a class="brand" href="index.html">Camrynn Zumwalt</a><nav class="nav-links" aria-label="Main navigation"><a href="index.html#projects">Projects</a><a class="active" href="aboutme.html" aria-current="page">About Me</a></nav></div></header>
-<main class="wrap">
-<section class="hero"><div class="eyebrow">A little about me</div><h1>I like making games feel alive.</h1><p class="lead">I’m a gameplay programmer studying Computer Science with an Animation and Games emphasis at Brigham Young University. I’m drawn to the parts of game development where code becomes something players can feel—an enemy reacting to them, an encounter finding its rhythm, or an animation making a character feel expressive.</p></section>
-<section><div class="section-head"><h2>What I enjoy building</h2></div><div class="cards">
-<article class="card"><span class="mini-label">AI &amp; behavior</span><h3>Reactive game characters</h3><p>I enjoy designing AI that makes decisions, responds to the player, and gives encounters personality—not just following a predictable script.</p></article>
-<article class="card"><span class="mini-label">Gameplay systems</span><h3>Mechanics that feel right</h3><p>I like working through how systems fit together, then tuning the details through testing until they’re clear, satisfying, and fun to play.</p></article>
-<article class="card"><span class="mini-label">Animation &amp; polish</span><h3>Bringing characters to life</h3><p>Connecting gameplay logic to animation, reactions, and small expressive details is one of my favorite ways to make a character feel present.</p></article>
-</div></section>
-<section><div class="section-head"><h2>My approach</h2></div><div class="story"><p>I’m happiest when I can take a feature from an early idea to something working in-game. That usually means experimenting, debugging, playtesting, adjusting the feel, and collaborating with the people building the art and animation around it.</p><p>I’m also a teaching assistant for Unreal Engine coursework, which gives me the chance to help other students troubleshoot their projects and explain technical concepts. It’s been a good reminder that solving a problem and helping someone understand how to solve it are both valuable parts of programming.</p></div></section>
-<section><div class="section-head"><h2>What I’m working toward</h2></div><div class="story"><p>I want to keep growing as a gameplay programmer and contribute to games with memorable combat, interesting AI, and mechanics that encourage players to engage and experiment. I’m especially excited to keep learning from other developers and working on teams where ideas can evolve through iteration.</p><p>Thanks for taking a look at my work!</p></div></section>
-<section><div class="section-head"><h2>Say hello</h2></div><div class="contact-card"><strong>Email</strong> · <a href="mailto:czumwalt1313@gmail.com">czumwalt1313@gmail.com</a><br><strong>GitHub</strong> · <a href="https://github.com/cammaicey" target="_blank" rel="noreferrer">@cammaicey</a><br><strong>LinkedIn</strong> · <a href="https://www.linkedin.com/in/camrynn-zumwalt-53849736b/" target="_blank" rel="noreferrer">Connect</a><br><strong>YouTube</strong> · <a href="https://www.youtube.com/@CamrynnZumwalt" target="_blank" rel="noreferrer">@CamrynnZumwalt</a></div></section>
-</main><footer><div class="wrap">© <span id="year"></span> Camrynn Zumwalt · Built with HTML &amp; CSS · GitHub Pages</div></footer><script>document.getElementById('year').textContent=new Date().getFullYear();</script></body></html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>About Me | Camrynn Zumwalt</title>
+    <meta name="description" content="A little about Camrynn Zumwalt, gameplay programmer and game AI enthusiast.">
+
+    <style>
+        :root {
+            --bg: #f7f6f2;
+            --paper: #fff;
+            --ink: #25272b;
+            --muted: #696d73;
+            --line: #e5e3dd;
+            --accent: #7767a5;
+            --max: 1040px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--ink);
+            font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .wrap {
+            width: min(var(--max), calc(100% - 40px));
+            margin: auto;
+        }
+
+        /* Header and navigation */
+        header {
+            padding: 28px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .brand {
+            font-weight: 700;
+            letter-spacing: .02em;
+        }
+
+        .nav a {
+            color: var(--muted);
+            font-size: .94rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 18px;
+        }
+
+        .nav-links a.active {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* Main content */
+        main {
+            padding: 54px 0 30px;
+        }
+
+        .hero {
+            padding: 20px 0 44px;
+        }
+
+        .eyebrow {
+            font-size: .8rem;
+            text-transform: uppercase;
+            letter-spacing: .14em;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: clamp(2.2rem, 5vw, 4.1rem);
+            line-height: 1.08;
+            letter-spacing: -.045em;
+            margin: 14px 0 20px;
+            font-weight: 750;
+        }
+
+        .lead {
+            max-width: 740px;
+            font-size: 1.13rem;
+            color: var(--muted);
+            margin: 0;
+        }
+
+        /* Sections */
+        section {
+            padding: 26px 0;
+        }
+
+        .section-head {
+            margin-bottom: 18px;
+        }
+
+        h2 {
+            font-size: 1.45rem;
+            letter-spacing: -.025em;
+            margin: 0;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        .card {
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 22px;
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            font-size: 1.1rem;
+        }
+
+        .card p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        .mini-label {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--accent);
+            font-size: .78rem;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+            font-weight: 700;
+        }
+
+        /* Story cards */
+        .story {
+            max-width: 780px;
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .story p {
+            color: var(--muted);
+            margin: 0 0 14px;
+        }
+
+        .story p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Contact */
+        .contact-card {
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 22px;
+            color: var(--muted);
+        }
+
+        .contact-card strong {
+            color: var(--ink);
+        }
+
+        /* Footer */
+        footer {
+            padding: 32px 0 40px;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: .85rem;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 700px) {
+            main {
+                padding: 38px 0 24px;
+            }
+
+            .hero {
+                padding: 10px 0 32px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .card,
+            .story,
+            .contact-card {
+                padding: 18px;
+            }
+
+            .nav {
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="wrap nav">
+            <a class="brand" href="index.html">Camrynn Zumwalt</a>
+
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="index.html#projects">Projects</a>
+                <a class="active" href="aboutme.html" aria-current="page">About Me</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="wrap">
+
+        <!-- Introduction -->
+        <section class="hero">
+            <div class="eyebrow">A little about me</div>
+
+            <h1>I like making games feel alive.</h1>
+
+            <p class="lead">
+                I’m a gameplay programmer studying Computer Science with an Animation
+                and Games emphasis at Brigham Young University. I’m drawn to the parts
+                of game development where code becomes something players can feel—an
+                enemy reacting to them, an encounter finding its rhythm, or an
+                animation making a character feel expressive.
+            </p>
+        </section>
+
+        <!-- Interests -->
+        <section>
+            <div class="section-head">
+                <h2>What I enjoy building</h2>
+            </div>
+
+            <div class="cards">
+
+                <article class="card">
+                    <span class="mini-label">AI &amp; behavior</span>
+                    <h3>Reactive game characters</h3>
+                    <p>
+                        I enjoy designing AI that makes decisions, responds to the
+                        player, and gives encounters personality—not just following
+                        a predictable script.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <span class="mini-label">Gameplay systems</span>
+                    <h3>Mechanics that feel right</h3>
+                    <p>
+                        I like working through how systems fit together, then tuning
+                        the details through testing until they’re clear, satisfying,
+                        and fun to play.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <span class="mini-label">Animation &amp; polish</span>
+                    <h3>Bringing characters to life</h3>
+                    <p>
+                        Connecting gameplay logic to animation, reactions, and small
+                        expressive details is one of my favorite ways to make a
+                        character feel present.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Work approach -->
+        <section>
+            <div class="section-head">
+                <h2>My approach</h2>
+            </div>
+
+            <div class="story">
+                <p>
+                    I’m happiest when I can take a feature from an early idea to
+                    something working in-game. That usually means experimenting,
+                    debugging, playtesting, adjusting the feel, and collaborating
+                    with the people building the art and animation around it.
+                </p>
+
+                <p>
+                    I’m also a teaching assistant for Unreal Engine coursework,
+                    which gives me the chance to help other students troubleshoot
+                    their projects and explain technical concepts. It’s been a good
+                    reminder that solving a problem and helping someone understand
+                    how to solve it are both valuable parts of programming.
+                </p>
+            </div>
+        </section>
+
+        <!-- Goals -->
+        <section>
+            <div class="section-head">
+                <h2>What I’m working toward</h2>
+            </div>
+
+            <div class="story">
+                <p>
+                    I want to keep growing as a gameplay programmer and contribute
+                    to games with memorable combat, interesting AI, and mechanics
+                    that encourage players to engage and experiment. I’m especially
+                    excited to keep learning from other developers and working on
+                    teams where ideas can evolve through iteration.
+                </p>
+
+                <p>
+                    Thanks for taking a look at my work!
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section>
+            <div class="section-head">
+                <h2>Say hello</h2>
+            </div>
+
+            <div class="contact-card">
+                <strong>Email</strong> ·
+                <a href="mailto:czumwalt1313@gmail.com">czumwalt1313@gmail.com</a>
+                <br>
+
+                <strong>GitHub</strong> ·
+                <a href="https://github.com/cammaicey" target="_blank" rel="noreferrer">@cammaicey</a>
+                <br>
+
+                <strong>LinkedIn</strong> ·
+                <a href="https://www.linkedin.com/in/camrynn-zumwalt-53849736b/" target="_blank" rel="noreferrer">Connect</a>
+                <br>
+
+                <strong>YouTube</strong> ·
+                <a href="https://www.youtube.com/@CamrynnZumwalt" target="_blank" rel="noreferrer">@CamrynnZumwalt</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="wrap">
+            © <span id="year"></span> Camrynn Zumwalt · Built with HTML &amp; CSS · GitHub Pages
+        </div>
+    </footer>
+
+    <!-- Automatically update copyright year -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
