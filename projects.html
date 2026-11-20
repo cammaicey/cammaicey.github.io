@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Projects | Camrynn Zumwalt</title>
-
     <meta name="description" content="Game projects by Camrynn Zumwalt, gameplay programmer focused on AI and systems.">
 
     <style>
@@ -202,79 +200,9 @@
             margin-top: 14px;
         }
 
-        .project.featured {
-            border-color: #d5cde5;
-        }
-
         .button.small {
             padding: 7px 12px;
             font-size: .86rem;
-        }
-
-        .two-col {
-            display: grid;
-            grid-template-columns: 1.1fr .9fr;
-            gap: 30px;
-        }
-
-        .plain-card {
-            background: var(--paper);
-            border: 1px solid var(--line);
-            border-radius: 12px;
-            padding: 22px;
-        }
-
-        .plain-card p {
-            margin: 0;
-            color: var(--muted);
-        }
-
-        .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .skill {
-            border: 1px solid var(--line);
-            border-radius: 6px;
-            padding: 6px 10px;
-            color: var(--muted);
-            font-size: .88rem;
-        }
-
-        .details {
-            margin: 0;
-            color: var(--muted);
-        }
-
-        .details strong {
-            color: var(--ink);
-        }
-
-        footer {
-            padding: 32px 0 40px;
-            border-top: 1px solid var(--line);
-            color: var(--muted);
-            font-size: .85rem;
-        }
-
-        @media (max-width: 700px) {
-            .hero {
-                padding: 48px 0 36px;
-            }
-
-            .two-col {
-                grid-template-columns: 1fr;
-            }
-
-            .project {
-                padding: 18px;
-            }
-
-            .nav {
-                align-items: flex-start;
-            }
         }
 
         .project.featured {
@@ -328,6 +256,10 @@
             color: var(--accent);
         }
 
+        .featured-content .project-main-link:hover p {
+            text-decoration: none;
+        }
+
         .featured-content .project-main-link p {
             margin-top: 10px;
         }
@@ -350,7 +282,26 @@
             z-index: 1;
         }
 
+        footer {
+            padding: 32px 0 40px;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: .85rem;
+        }
+
         @media (max-width: 700px) {
+            .hero {
+                padding: 48px 0 36px;
+            }
+
+            .project {
+                padding: 18px;
+            }
+
+            .nav {
+                align-items: flex-start;
+            }
+
             .project.featured {
                 grid-template-columns: 1fr;
             }
@@ -402,35 +353,32 @@
         <section id="projects">
 
             <div class="hero" style="padding:48px 0 28px">
-                <div class="eyebrow">Selected work</div>
                 <h1>Projects</h1>
-                <p class="lead">A collection of gameplay programming, AI, and game development projects.</p>
-            </div>
-
-            <div class="hero" style="padding:48px 0 28px">
-                <div class="eyebrow">Selected work</div>
-                <h1>Projects</h1>
-                <p class="lead">A collection of gameplay programming, AI, and game development projects.</p>
-            </div>
-
-            <div class="section-head">
-                <h2>Projects</h2>
-                <span class="hint">Project pages, media & links</span>
+                <p class="lead">
+                    A collection of gameplay programming, AI, and game development projects.
+                </p>
             </div>
 
             <div class="projects">
 
+                <!-- Dragon Kisser -->
                 <article class="project featured">
 
-                    <a class="featured-image" href="dragonkisser.html" aria-label="Open the Dragon Kisser project showcase">
-                        <img src="media/pictures/dk-poster.jpg" alt="Dragon Kisser game artwork">
+                    <a class="featured-image"
+                       href="dragonkisser.html"
+                       aria-label="Open the Dragon Kisser project showcase">
+
+                        <img src="media/pictures/dk-poster.jpg"
+                             alt="Dragon Kisser game artwork">
                     </a>
 
                     <div class="featured-content">
 
                         <div class="project-top">
                             <h3>Dragon Kisser</h3>
-                            <div class="meta">BYU Senior Capstone · 2025–2026</div>
+                            <div class="meta">
+                                BYU Senior Capstone · 2025–2026
+                            </div>
                         </div>
 
                         <a class="project-main-link" href="dragonkisser.html">
@@ -453,19 +401,29 @@
                         </div>
 
                         <div class="project-actions">
-                            <a class="button primary" href="dragonkisser.html">Explore Project</a>
+                            <a class="button primary" href="dragonkisser.html">
+                                Explore Project
+                            </a>
 
-                            <a class="button small" href="https://store.steampowered.com/app/4681880/Dragon_Kisser/" target="_blank" rel="noreferrer">Play on Steam</a>
+                            <a class="button small"
+                               href="https://store.steampowered.com/app/4681880/Dragon_Kisser/"
+                               target="_blank"
+                               rel="noreferrer">
+                                Play on Steam
+                            </a>
                         </div>
 
                     </div>
                 </article>
 
+                <!-- Nuked by Noon -->
                 <article class="project">
 
                     <div class="project-top">
                         <h3>Nuked by Noon</h3>
-                        <div class="meta">CSANM 342: Real-Time Techniques / CSANM 494R: Special Problems · 2025–2026</div>
+                        <div class="meta">
+                            CSANM 342: Real-Time Techniques / CSANM 494R: Special Problems · 2025–2026
+                        </div>
                     </div>
 
                     <p>
@@ -479,131 +437,21 @@
                     </div>
 
                     <div class="project-actions">
-                        <a class="button" href="nukedbynoon.html">Explore project →</a>
-                    </div>
-
-                </article>
-
-                <article class="project">
-
-                    <div class="project-top">
-                        <h3>Spooky Circus Maze</h3>
-                        <div class="meta">CS 455: Computer Graphics · 2026</div>
-                    </div>
-
-                    <p>
-                        This project is a spooky, circus-themed maze game that I built in collaboration with two other programmers. I focus on the core gameplay code and systems design for navigating and surviving the maze, while we iterate together on pacing, difficulty, and how the circus atmosphere shapes the player experience.
-                    </p>
-
-                    <div class="tags">
-                        <span class="tag">Unity</span>
-                        <span class="tag">AI</span>
-                        <span class="tag">Prototype</span>
-                    </div>
-
-                    <a class="project-link" href="GITHUB_OR_DEMO_URL_FOR_CIRCUS_MAZE" target="_blank" rel="noreferrer">
-                        More details (Work-In-Progress) →
-                    </a>
-
-                </article>
-
-            </div>
-        </section>
-
-        
-    </main>
-
-<footer>
-        <div class="wrap">
-            © <span id="year"></span> Camrynn Zumwalt · Built with HTML & CSS · GitHub Pages
-        </div>
-    </footer>
-
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-
-</body>
-</html>    <main class="wrap">
-
-        <section id="projects">
-
-            <div class="section-head">
-                <h2>Projects</h2>
-                <span class="hint">Project pages, media & links</span>
-            </div>
-
-            <div class="projects">
-
-                <article class="project featured">
-
-                    <a class="featured-image" href="dragonkisser.html" aria-label="Open the Dragon Kisser project showcase">
-                        <img src="media/pictures/dk-poster.jpg" alt="Dragon Kisser game artwork">
-                    </a>
-
-                    <div class="featured-content">
-
-                        <div class="project-top">
-                            <h3>Dragon Kisser</h3>
-                            <div class="meta">BYU Senior Capstone · 2025–2026</div>
-                        </div>
-
-                        <a class="project-main-link" href="dragonkisser.html">
-                            <p>
-                                Dragon Kisser is a boss-fight game centered around Domingo, a chicken trying to romance Luciana, a dragon. I work on Team Luciana, implementing her AI behavior using Unreal State Trees and Behavior Trees, and her Animation Blueprint with procedural animation for her neck, head, and eyes.
-                            </p>
-
-                            <span class="featured-cta">
-                                View Project Showcase
-                                <span aria-hidden="true">→</span>
-                            </span>
+                        <a class="button" href="nukedbynoon.html">
+                            Explore project →
                         </a>
-
-                        <div class="tags">
-                            <span class="tag">Unreal Engine</span>
-                            <span class="tag">State Trees</span>
-                            <span class="tag">Behavior Trees</span>
-                            <span class="tag">Perforce</span>
-                            <span class="tag">Technical Animation</span>
-                        </div>
-
-                        <div class="project-actions">
-                            <a class="button primary" href="dragonkisser.html">Explore Project</a>
-
-                            <a class="button small" href="https://store.steampowered.com/app/4681880/Dragon_Kisser/" target="_blank" rel="noreferrer">Play on Steam</a>
-                        </div>
-
-                    </div>
-                </article>
-
-                <article class="project">
-
-                    <div class="project-top">
-                        <h3>Nuked by Noon</h3>
-                        <div class="meta">CSANM 342: Real-Time Techniques / CSANM 494R: Special Problems · 2025–2026</div>
-                    </div>
-
-                    <p>
-                        Nuked by Noon is a stealth game where I handled all of the programming and collaborated with artists for visual assets. My main focus was designing an AI system that can detect, search for, and attack the player using Unreal’s State Trees and AI Perception, creating an enemy that reacts intelligently to the player’s movements and visibility.
-                    </p>
-
-                    <div class="tags">
-                        <span class="tag">Unreal Engine</span>
-                        <span class="tag">AI Perception</span>
-                        <span class="tag">State Trees</span>
-                    </div>
-
-                    <div class="project-actions">
-                        <a class="button" href="nukedbynoon.html">Explore project →</a>
                     </div>
 
                 </article>
 
+                <!-- Spooky Circus Maze -->
                 <article class="project">
 
                     <div class="project-top">
                         <h3>Spooky Circus Maze</h3>
-                        <div class="meta">CS 455: Computer Graphics · 2026</div>
+                        <div class="meta">
+                            CS 455: Computer Graphics · 2026
+                        </div>
                     </div>
 
                     <p>
@@ -616,7 +464,10 @@
                         <span class="tag">Prototype</span>
                     </div>
 
-                    <a class="project-link" href="GITHUB_OR_DEMO_URL_FOR_CIRCUS_MAZE" target="_blank" rel="noreferrer">
+                    <a class="project-link"
+                       href="GITHUB_OR_DEMO_URL_FOR_CIRCUS_MAZE"
+                       target="_blank"
+                       rel="noreferrer">
                         More details (Work-In-Progress) →
                     </a>
 
@@ -627,6 +478,7 @@
 
     </main>
 
+    <!-- Footer: kept once, with automatically updating year -->
     <footer>
         <div class="wrap">
             © <span id="year"></span> Camrynn Zumwalt · Built with HTML & CSS · GitHub Pages
