@@ -186,6 +186,17 @@
             font-weight: 700;
         }
 
+        .approach-goals {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+            align-items: stretch;
+        }
+
+        .approach-goals section {
+            padding: 20px 0;
+        }
+
         .story {
             max-width: 780px;
             background: var(--paper);
@@ -233,6 +244,11 @@
 
             .cards {
                 grid-template-columns: 1fr;
+            }
+
+            .approach-goals {
+                grid-template-columns: 1fr;
+                gap: 0;
             }
 
             .intro-layout {
@@ -343,6 +359,7 @@
             </div>
         </section>
 
+        <div class="approach-goals">
         <!-- Work approach -->
         <section>
             <div class="section-head">
@@ -387,6 +404,8 @@
                 </p>
             </div>
         </section>
+
+        </div>
 
         <!-- Contact -->
         <section>
