@@ -214,6 +214,20 @@
             margin-bottom: 0;
         }
 
+        .about-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 250px;
+            gap: 28px;
+            align-items: start;
+        }
+
+        .contact-sidebar {
+            position: sticky;
+            top: 24px;
+            align-self: start;
+            margin-top: 8px;
+        }
+
         .contact-card {
             background: var(--paper);
             border: 1px solid var(--line);
@@ -236,6 +250,15 @@
         @media (max-width: 700px) {
             main {
                 padding: 24px 0 18px;
+            }
+
+            .about-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-sidebar {
+                position: static;
+                margin-top: 0;
             }
 
             .hero {
@@ -305,7 +328,8 @@
     </header>
 
     <!-- Main content -->
-    <main class="wrap">
+    <main class="wrap about-layout">
+        <div class="about-main">
         <!-- Introduction -->
         <section class="hero">
             <div class="intro-layout">
@@ -408,8 +432,10 @@
 
         </div>
 
-        <!-- Contact -->
-        <section>
+        </div>
+
+        <!-- Sticky contact sidebar -->
+        <aside class="contact-sidebar">
             <div class="section-head">
                 <h2>Contact Info</h2>
             </div>
@@ -430,7 +456,7 @@
                 <strong>YouTube</strong> ·
                 <a href="https://www.youtube.com/@CamrynnZumwalt" target="_blank" rel="noreferrer">@CamrynnZumwalt</a>
             </div>
-        </section>
+        </aside>
     </main>
 
     <!-- Footer -->
