@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -206,13 +205,6 @@
             font-size: .86rem;
         }
 
-        footer {
-            padding: 32px 0 40px;
-            border-top: 1px solid var(--line);
-            color: var(--muted);
-            font-size: .85rem;
-        }
-
         .project.featured {
             padding: 0;
             overflow: hidden;
@@ -290,6 +282,13 @@
             z-index: 1;
         }
 
+        footer {
+            padding: 32px 0 40px;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: .85rem;
+        }
+
         @media (max-width: 700px) {
             .hero {
                 padding: 48px 0 36px;
@@ -337,16 +336,10 @@
         <section id="projects">
 
             <div class="hero" style="padding:48px 0 28px">
-                <div class="eyebrow">Selected work</div>
                 <h1>Projects</h1>
                 <p class="lead">
                     A collection of gameplay programming, AI, and game development projects.
                 </p>
-            </div>
-
-            <div class="section-head">
-                <h2>Projects</h2>
-                <span class="hint">Project pages, media & links</span>
             </div>
 
             <div class="projects">
@@ -451,4 +444,33 @@
                     <div class="tags">
                         <span class="tag">Unity</span>
                         <span class="tag">AI</span>
-                        <
+                        <span class="tag">Prototype</span>
+                    </div>
+
+                    <a class="project-link"
+                       href="GITHUB_OR_DEMO_URL_FOR_CIRCUS_MAZE"
+                       target="_blank"
+                       rel="noreferrer">
+                        More details (Work-In-Progress) →
+                    </a>
+
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer: kept once, with automatically updating year -->
+    <footer>
+        <div class="wrap">
+            © <span id="year"></span> Camrynn Zumwalt · Built with HTML & CSS · GitHub Pages
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
