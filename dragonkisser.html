@@ -304,6 +304,7 @@
             border-radius: 8px;
         }
 
+        .project-title-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.project-title-row h1{margin:8px 0}.steam-title-button{padding:8px 12px;font-size:.88rem;white-space:nowrap}
     .project-layout{display:grid;grid-template-columns:190px minmax(0,1fr);gap:28px;align-items:start}.project-sidebar{position:sticky;top:24px;margin-top:8px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px}.sidebar-heading{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;color:var(--muted);padding:4px 8px 9px}.project-sidebar nav{display:flex;flex-direction:column;gap:4px}.project-sidebar nav a{display:block;color:var(--muted);padding:8px 9px;border-radius:7px;font-size:.92rem;line-height:1.35}.project-sidebar nav a:hover{background:var(--accentp, #30273b);color:var(--accent);text-decoration:none}.project-sidebar nav a.active{background:var(--accentp, #30273b);color:var(--accent);font-weight:700}.project-content{min-width:0;position:relative;isolation:isolate}.project-content::before{content:"";position:absolute;inset:0;background-image:url("media/pictures/dk-poster.jpg");background-size:contain;background-position:center top;background-repeat:no-repeat;opacity:.045;pointer-events:none;z-index:-1}.project-main-grid{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:28px;align-items:start}.project-video-sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:16px}.project-video-sidebar .section{margin-top:0}@media(max-width:1000px){.project-main-grid{grid-template-columns:minmax(0,1fr) 280px;gap:20px}}@media(max-width:800px){.project-layout{grid-template-columns:1fr;gap:16px}.project-sidebar{position:static;margin:0;padding:10px}.project-sidebar nav{flex-direction:row;flex-wrap:wrap}.project-sidebar nav a{font-size:.82rem;padding:7px 9px}.project-content{min-width:0}.project-main-grid{grid-template-columns:1fr}.project-video-sidebar{position:static}}
         /* Mobile header layout */
         @media (max-width: 700px) {
@@ -339,7 +340,7 @@
         <!-- Project introduction -->
         <div class="eyebrow">Senior Capstone · Luciana</div>
 
-        <h1>Dragon Kisser</h1>
+        <div class="project-title-row"><h1>Dragon Kisser</h1><a class="button primary steam-title-button" href="https://store.steampowered.com/app/4681880/Dragon_Kisser/" target="_blank" rel="noreferrer">View on Steam ↗</a></div>
 
         <p class="subtitle">
             Gameplay Programmer · Boss AI & Technical Animation
@@ -356,17 +357,7 @@
 <div class="project-main-grid"><div class="project-main-content">
 
 
-         <!-- External links -->
-        <div class="actions">
-            <a
-                class="button primary"
-                href="https://store.steampowered.com/app/4681880/Dragon_Kisser/"
-                target="_blank"
-                rel="noreferrer"
-            >
-                View on Steam ↗
-            </a>
-        </div>
+ 
 
         <!-- Screenshots -->
         <section class="section">
