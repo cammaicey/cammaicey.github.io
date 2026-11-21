@@ -304,7 +304,7 @@
             border-radius: 8px;
         }
 
-    .project-layout{display:grid;grid-template-columns:190px minmax(0,1fr);gap:28px;align-items:start}.project-sidebar{position:sticky;top:24px;margin-top:8px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px}.sidebar-heading{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;color:var(--muted);padding:4px 8px 9px}.project-sidebar nav{display:flex;flex-direction:column;gap:4px}.project-sidebar nav a{display:block;color:var(--muted);padding:8px 9px;border-radius:7px;font-size:.92rem;line-height:1.35}.project-sidebar nav a:hover{background:var(--accentp, #30273b);color:var(--accent);text-decoration:none}.project-sidebar nav a.active{background:var(--accentp, #30273b);color:var(--accent);font-weight:700}@media(max-width:800px){.project-layout{grid-template-columns:1fr;gap:16px}.project-sidebar{position:static;margin:0;padding:10px}.project-sidebar nav{flex-direction:row;flex-wrap:wrap}.project-sidebar nav a{font-size:.82rem;padding:7px 9px}.project-content{min-width:0}}
+    .project-layout{display:grid;grid-template-columns:190px minmax(0,1fr);gap:28px;align-items:start}.project-sidebar{position:sticky;top:24px;margin-top:8px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px}.sidebar-heading{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;color:var(--muted);padding:4px 8px 9px}.project-sidebar nav{display:flex;flex-direction:column;gap:4px}.project-sidebar nav a{display:block;color:var(--muted);padding:8px 9px;border-radius:7px;font-size:.92rem;line-height:1.35}.project-sidebar nav a:hover{background:var(--accentp, #30273b);color:var(--accent);text-decoration:none}.project-sidebar nav a.active{background:var(--accentp, #30273b);color:var(--accent);font-weight:700}.project-content{min-width:0}.project-main-grid{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:28px;align-items:start}.project-video-sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:16px}.project-video-sidebar .section{margin-top:0}@media(max-width:1000px){.project-main-grid{grid-template-columns:minmax(0,1fr) 280px;gap:20px}}@media(max-width:800px){.project-layout{grid-template-columns:1fr;gap:16px}.project-sidebar{position:static;margin:0;padding:10px}.project-sidebar nav{flex-direction:row;flex-wrap:wrap}.project-sidebar nav a{font-size:.82rem;padding:7px 9px}.project-content{min-width:0}.project-main-grid{grid-template-columns:1fr}.project-video-sidebar{position:static}}
         /* Mobile header layout */
         @media (max-width: 700px) {
             header { padding: 14px 0; }
@@ -353,6 +353,7 @@
             playthroughs, screenshots, and technical breakdowns.
         </p>
 <section class="focus-sections" aria-label="Project focus"><div class="focus-section"><h2>Programming Focus</h2></div><div class="focus-section"><h2>Design Focus</h2></div></section>
+<div class="project-main-grid"><div class="project-main-content">
 
 
          <!-- Role information -->
@@ -393,7 +394,79 @@
             </a>
         </div>
 
-        <!-- Featured coverage -->
+        <!-- Screenshots -->
+        <section class="section">
+
+            <h2>Screenshots & gallery</h2>
+
+            <p class="section-desc">
+                Gameplay shots, AI debugging, animation setup, and
+                behind-the-scenes technical images. Replace placeholders
+                with your images when ready.
+            </p>
+
+            <div class="grid">
+
+                <!-- Gameplay -->
+                <article class="media-card">
+
+                    <div class="media-placeholder">
+                        Gameplay screenshot placeholder
+                    </div>
+
+                    <div class="caption">
+                        <strong>Gameplay</strong>
+                        Boss encounter / player perspective
+                    </div>
+
+                </article>
+
+                <!-- AI -->
+                <article class="media-card">
+
+                    <div class="media-placeholder">
+                        AI / State Tree image placeholder
+                    </div>
+
+                    <div class="caption">
+                        <strong>Boss AI</strong>
+                        Luciana's state logic
+                    </div>
+
+                </article>
+
+                <!-- Animation -->
+                <article class="media-card">
+
+                    <div class="media-placeholder">
+                        Animation image placeholder
+                    </div>
+
+                    <div class="caption">
+                        <strong>Technical animation</strong>
+                        Procedural look-at and neck setup
+                    </div>
+
+                </article>
+
+                <!-- Development -->
+                <article class="media-card">
+
+                    <div class="media-placeholder">
+                        Behind-the-scenes placeholder
+                    </div>
+
+                    <div class="caption">
+                        <strong>Development process</strong>
+                        Tools, debug views, iteration
+                    </div>
+
+                </article>
+
+            </div>
+        </section>
+
+</div><aside class="project-video-sidebar">        <!-- Featured coverage -->
         <section class="section">
 
             <h2>Featured coverage</h2>
@@ -491,79 +564,7 @@
             </div>
         </section>
 
-        <!-- Screenshots -->
-        <section class="section">
-
-            <h2>Screenshots & gallery</h2>
-
-            <p class="section-desc">
-                Gameplay shots, AI debugging, animation setup, and
-                behind-the-scenes technical images. Replace placeholders
-                with your images when ready.
-            </p>
-
-            <div class="grid">
-
-                <!-- Gameplay -->
-                <article class="media-card">
-
-                    <div class="media-placeholder">
-                        Gameplay screenshot placeholder
-                    </div>
-
-                    <div class="caption">
-                        <strong>Gameplay</strong>
-                        Boss encounter / player perspective
-                    </div>
-
-                </article>
-
-                <!-- AI -->
-                <article class="media-card">
-
-                    <div class="media-placeholder">
-                        AI / State Tree image placeholder
-                    </div>
-
-                    <div class="caption">
-                        <strong>Boss AI</strong>
-                        Luciana's state logic
-                    </div>
-
-                </article>
-
-                <!-- Animation -->
-                <article class="media-card">
-
-                    <div class="media-placeholder">
-                        Animation image placeholder
-                    </div>
-
-                    <div class="caption">
-                        <strong>Technical animation</strong>
-                        Procedural look-at and neck setup
-                    </div>
-
-                </article>
-
-                <!-- Development -->
-                <article class="media-card">
-
-                    <div class="media-placeholder">
-                        Behind-the-scenes placeholder
-                    </div>
-
-                    <div class="caption">
-                        <strong>Development process</strong>
-                        Tools, debug views, iteration
-                    </div>
-
-                </article>
-
-            </div>
-        </section>
-
-    </div></main>
+</aside></div>    </div></main>
 
     <!-- Footer -->
     <footer>
