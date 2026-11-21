@@ -405,7 +405,16 @@
             border-radius: 8px;
         }
 
-    </style>
+    
+        /* Mobile header layout */
+        @media (max-width: 700px) {
+            header { padding: 14px 0; }
+            .nav { align-items: flex-start; flex-direction: column; gap: 8px; }
+            .brand { flex-wrap: wrap; max-width: 100%; }
+            .brand-role { white-space: normal; }
+            .nav-links { flex-wrap: wrap; gap: 10px 14px; }
+        }
+</style>
 </head>
 
 <body>
