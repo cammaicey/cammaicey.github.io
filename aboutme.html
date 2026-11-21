@@ -159,6 +159,44 @@
             gap: 14px;
         }
 
+        .favorite-games .favorite-game {
+            display: block;
+            overflow: hidden;
+            padding: 0;
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            color: var(--ink);
+            transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+        }
+
+        .favorite-games .favorite-game:hover {
+            text-decoration: none;
+            transform: translateY(-4px);
+            border-color: var(--accent);
+            box-shadow: 0 8px 24px rgba(165, 138, 203, .12);
+        }
+
+        .favorite-game img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 460 / 215;
+            object-fit: cover;
+        }
+
+        .favorite-game h3 {
+            margin: 14px 16px 4px;
+            font-size: 1.05rem;
+        }
+
+        .favorite-game span {
+            display: block;
+            margin: 0 16px 14px;
+            color: var(--accent);
+            font-size: .85rem;
+        }
+
+
         .card {
             background: var(--paper);
             border: 1px solid var(--line);
@@ -365,18 +403,24 @@
                 <h2>Some of My Favorite Games</h2>
             </div>
 
-            <div class="cards">
-                <article class="card">
+            <div class="cards favorite-games">
+                <a class="favorite-game" href="https://store.steampowered.com/app/1604030/V_Rising/" target="_blank" rel="noreferrer">
+                    <img src="https://cdn.akamai.steamstatic.com/steam/apps/1604030/header.jpg" alt="V Rising Steam artwork">
                     <h3>V Rising</h3>
-                </article>
+                    <span>View on Steam ↗</span>
+                </a>
 
-                <article class="card">
+                <a class="favorite-game" href="https://store.steampowered.com/app/3751260/The_Blood_of_Dawnwalker/" target="_blank" rel="noreferrer">
+                    <img src="https://cdn.akamai.steamstatic.com/steam/apps/3751260/header.jpg" alt="The Blood of Dawnwalker Steam artwork">
                     <h3>The Blood of Dawnwalker</h3>
-                </article>
+                    <span>View on Steam ↗</span>
+                </a>
 
-                <article class="card">
+                <a class="favorite-game" href="https://store.steampowered.com/app/2124490/SILENT_HILL_2/" target="_blank" rel="noreferrer">
+                    <img src="https://cdn.akamai.steamstatic.com/steam/apps/2124490/header.jpg" alt="Silent Hill 2 Steam artwork">
                     <h3>Silent Hill 2</h3>
-                </article>
+                    <span>View on Steam ↗</span>
+                </a>
             </div>        </section>
 
 
